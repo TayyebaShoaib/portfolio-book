@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+#about {
+  background-color: #ffd4cc;
+  height: calc(100vh - 76px);
+  padding-top: 1px;
+}
