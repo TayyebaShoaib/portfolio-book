@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+/* general */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+                       /********** Header **********/
+
+header {
+  color: #dd4b4b;
+  min-height: 70px;
+  padding: 15px 0;
+  border-bottom: solid 2px #999;
+}
+
+header #name img {
+  width: 290px;
+  height: 45px;
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+header nav,
+header li {
+  display: inline-block;
+}
+
+header li {
+  padding: 10px 20px;
+}
+
+header nav li a:link {
+  color: #E84979;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header a:hover {
+  border-bottom: 3px solid #e8491d;
+  padding-bottom: 4px;
+}
+
+/* Top Section */
+
+#top {
+  background-color: #ffdbdb;
+  min-height: 400px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  
+  display: table;
+}
+
+#top .container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#top h2 {
+  margin: 0;
+  padding-bottom: .5em;
+  font-size: 3em;
+}
+ 
+#top li {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+#top ul li:not(.first):before {
+  content: "\2735";
+  padding: 0 .5em;
+}
+ 
+/* Main Section */
+
+#main {
+  margin: 2rem 0;
+}
+
+#main .cell {
+  margin: 1rem;
+}
+
+#main .cell img {
+  max-width: 100%;
+  display: block;
+}
+ 
+
+                      /********** Footer **********/
+
+footer {
+  color: #fff;
+}
+
+footer h2, footer p {
+  background-color: #E84979;
+  text-align: center;
+}
+
+footer h2 {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  margin: 0  auto .9em auto;
+  text-shadow: -2px 3px 3px #555;
+}
+
+footer p {
+  height: 50px;
+  margin: 0;
+  line-height: 40px;
+}
+
+footer .flex {
+  display: flex;
+  flex-direction: column;
+  background-color: #C0C0C0;
+  justify-content: space-around;
+  padding: 1.5em 0;
+  align-items: center;
+}
+
+footer #icons {
+  order: 1;
+}
+
+footer #icons a {
+  display: inline-block;
+}
+
+footer #icons a span.text {
+  display: none;
+}
+
+footer i::before {
+  background-color: #E84979;
+  width: 34px;
+  height: 34px;
+  display: block;
+  line-height: 34px;
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+footer form {
+  margin-bottom: 2.5em;
+}
+
+footer form label {
+  color: #E84979;
+  padding-bottom: 5px;
+}
+ 
+footer form input, footer form textarea {
+  background-color: #D3D3D3;
+  outline: none;
+  color: #fff;
+  border: 1px solid #E84979;
+  width: 250px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 10px;
+  margin: 7px 0 20px 0;
+}
+
+footer form input:focus, footer form textarea:focus {
+  outline: 1px solid #E84979;
+  box-shadow: 0px 0px 3px 0px #E84979;
+}
+
+footer form textarea {
+  width: 250px;
+  height: 130px;
+}
+
+footer form button {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 23px;
+  border-radius: 3px;
+  border: 1px solid #E84979;
+  background-color: #E84979;
+  transition: all 0.5s ease-in-out;
+}
+
+footer form button:hover {
+  background-color: #fff;
+  color: #E84979;
+  border-color: #E84979;
+}
+
+ 
+/* Media Section */
+
+@media (max-width: 786px) {
+   
+  header nav,
+  header #name img {
+    float: none;
+  }
+  
+  header #name img {
+    width: 270px;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  header li {
+  padding: 10px 8px;
+  }
+    
+}
+
+@media screen and (min-width: 786px) {
+  
+  .container {
+    width: 80%;
+  }
+  /*  Main  */
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: calc(50% - 2rem);
+  }
+  
+   
+  /*  Footer  */
+  
+  footer .flex {
+    flex-direction: row;
+  }
+  
+  footer #icons {
+    order: 0;
+  }
+  
+  footer #icons a {
+    display: block;
+  }
+  
+  footer #icons a:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+  
+  footer #icons a span.text {
+    display: inline;
+  }
+  
+  footer form {
+    margin: 0;
+  }
+} 
