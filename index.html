@@ -1,36 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>TS | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
-    <link rel="stylesheet" type="text/css" href="portfolio.css" />
-  </head>
-  <body>
-    <!--<header>-->
-    <!--  <div>-->
-    <!--      <a class="logo" href="portfolio.html">-->
-    <!--        <img src="" />-->
-    <!--      </a>-->
-    <!--      <span id="name">T Shoaib</span>-->
-    <!--    </div>-->
-    <!--    <nav>-->
-    <!--      <ul>-->
-    <!--        <li>Work</li>-->
-    <!--        <li>About</li>-->
-    <!--        <li>Contact</li>-->
-    <!--      </ul>-->
-    <!--    </nav>-->
-    <!--</header>-->
-    <section id="about">
-      <h1>Responsive Front-End Development</h1>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>TS | Portfolio</title>
+  <script src="https://use.fontawesome.com/c260a9c966.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="practice.css" />
+</head>
+<body>
+  
+  <section id="top">
+    <div class="container">
+      <h2>Responsive Front-End Developer</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
+        <li class="first">HTML5</li>
+        <li>CSS3</li>
         <li>JavaScript</li>
-        <li>WordPress</li>
+        <li>JQuery</li>
       </ul>
-    </section>
-    
-  </body>
-</html>
+    </div>
+  </section>
+  
+  <header>
+    <div class="container">
+      <div id="name">
+        <a href="#"><img src="img/name.png"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="main">
+    <div class="grid container">
+      <div class="cell">
+        <img src="http://placehold.it/600x500">
+      </div>
+      <div class="cell">
+        <img src="http://placehold.it/600x500" class="responsive-image"/>
+      </div>
+      <div class="cell">
+        <img src="http://placehold.it/600x500" class="responsive-image"/>
+      </div>
+      <div class="cell">
+        <img src="http://placehold.it/600x500" class="responsive-image"/>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <h2>Get In Touch</h2>
+    <div class="flex">
+      <div id="icons">
+        <a href="#">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <span class="text">Follow me on Twitter</span>
+        </a>
+        <a>
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span class="text">Checkout my code at GitHub</span>
+        </a>
+        <a>
+          <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+          <span class="text">Checkout my profile at FreeCodeCamp</span>
+        </a>
+        <a>
+          <i class="fa fa-free-code-camp" aria-hidden="true"></i>
+          <span class="text">Email Me at something@gmail.com</span>
+        </a>
+      </div>
+      <form>
+        <label>Email <br>
+          <input type="email" name="email" required> <br>
+        </label>
+        <label>Message <br>
+          <textarea></textarea>
+        </label>
+        <button>
+          Send
+        </button>
+      </form>
+    </div>
+    <p>&copy; Tayyeba Shoaib 2017. All rights reserved.</p>
+  </footer>
+     
+</body>
+</html> 
