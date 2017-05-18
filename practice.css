@@ -1,8 +1,8 @@
+                       /********** General **********/
+
 * {
   box-sizing: border-box;
 }
-
-/* general */
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +11,6 @@ body {
 .container {
   width: 90%;
   margin: auto;
-  overflow: hidden;
 }
 
 ul {
@@ -29,42 +28,57 @@ a {
 
 header {
   color: #dd4b4b;
-  min-height: 70px;
+  height: auto;
   padding: 15px 0;
   border-bottom: solid 2px #999;
+  background-color: #fff;
 }
 
 header #name img {
   width: 290px;
   height: 45px;
-  float: left;
 }
 
-header nav {
-  float: right;
-}
-
-header nav,
-header li {
-  display: inline-block;
-}
-
-header li {
-  padding: 10px 20px;
-}
-
-header nav li a:link {
+header nav li a {
   color: #E84979;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-header a:hover {
-  border-bottom: 3px solid #e8491d;
+header li a:hover {
+  border-bottom: 3px solid #A54545;
   padding-bottom: 4px;
 }
 
-/* Top Section */
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .flex ul {
+  display: flex;
+  margin: 10px 0 5px;
+}
+
+header .flex ul li {
+  margin-left: 30px;
+}
+
+header .flex ul li:nth-child(3) {
+  margin-right: 30px;
+}
+ 
+
+
+                       /********** Top **********/
 
 #top {
   background-color: #ffdbdb;
@@ -85,7 +99,7 @@ header a:hover {
 #top h2 {
   margin: 0;
   padding-bottom: .5em;
-  font-size: 3em;
+  font-size: 2.5rem;
 }
  
 #top li {
@@ -100,10 +114,10 @@ header a:hover {
   padding: 0 .5em;
 }
  
-/* Main Section */
+                      /********** Main **********/
 
 #main {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 #main .cell {
@@ -197,7 +211,7 @@ footer form input, footer form textarea {
 
 footer form input:focus, footer form textarea:focus {
   outline: 1px solid #E84979;
-  box-shadow: 0px 0px 3px 0px #E84979;
+  box-shadow: 0px 0px 3px 2px #E84979;
 }
 
 footer form textarea {
@@ -224,36 +238,25 @@ footer form button:hover {
 }
 
  
-/* Media Section */
 
-@media (max-width: 786px) {
-   
-  header nav,
-  header #name img {
-    float: none;
-  }
-  
-  header #name img {
-    width: 270px;
-  }
-  
-  header {
-    text-align: center;
-  }
-  
-  header li {
-  padding: 10px 8px;
-  }
-    
-}
+ 
 
-@media screen and (min-width: 786px) {
+                       /********** Media **********/
   
+@media screen and (min-width: 760px) {
   .container {
     width: 80%;
   }
-  /*  Main  */
   
+  header .flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #top h2 {
+    font-size: 3rem;
+  }
+   
   .grid {
     display: flex;
     flex-wrap: wrap;
@@ -262,9 +265,6 @@ footer form button:hover {
   .cell {
     width: calc(50% - 2rem);
   }
-  
-   
-  /*  Footer  */
   
   footer .flex {
     flex-direction: row;
@@ -289,4 +289,4 @@ footer form button:hover {
   footer form {
     margin: 0;
   }
-} 
+}
