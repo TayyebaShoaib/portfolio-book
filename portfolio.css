@@ -129,6 +129,7 @@ header .flex ul li:nth-child(3) {
 #main .cell img {
   max-width: 100%;
   display: block;
+  border: 1px solid #000;
 }
  
 
